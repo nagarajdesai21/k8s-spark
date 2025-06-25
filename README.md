@@ -1,0 +1,1 @@
+minikube image load custom-spark-image-with-spark-connect-jar

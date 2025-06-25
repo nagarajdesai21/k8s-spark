@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spark-connect-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: spark-connect-server
+  template:
+    metadata:
+      labels:
+        app: spark-connect-server
+    spec:
+      containers:
+        - name: spark-connect-server
+          image: custom-spark-image-with-spark-connect-jar
+          imagePullPolicy: Never
+          command: ["/bin/sh", "-c"]
+          args:
+            - "/opt/spark/sbin/start-connect-server.sh & tail -f /dev/null"
+          ports:
+            - containerPort: 15002
+
