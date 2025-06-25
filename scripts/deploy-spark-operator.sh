@@ -11,7 +11,7 @@ helm install spark-operator spark-operator/spark-operator \
     --set createSparkJobNamespace=false \
     --wait
 
-kubectl apply -f ../k8s/spark-pi.yaml
+kubectl apply -f k8s/spark-pi.yaml
 
 kubectl get sparkapplications
 kubectl get pods

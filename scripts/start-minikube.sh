@@ -10,3 +10,10 @@ minikube addons enable ingress
 kubectl config use-context minikube
 
 minikube status
+
+
+# helm install spark-connect/spark-connect \
+#   --set image.repository=spark-connect-server \
+#   --set image.tag=latest \
+#   --set sparkConnect.port=15002 \
+#   --set service.type=NodePort
