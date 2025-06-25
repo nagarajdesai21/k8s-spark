@@ -12,6 +12,7 @@ RUN wget -q https://archive.apache.org/dist/incubator/livy/${LIVY_VERSION}/apach
     rm /tmp/livy.zip
 
 COPY livy.conf $LIVY_HOME/conf
+COPY spark-defaults.conf $LIVY_HOME/conf
 ENV PATH="$PATH:$LIVY_HOME/bin"
 ENV LIVY_LOG_DIR=$LIVY_HOME/logs
 
