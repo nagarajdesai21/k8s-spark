@@ -1,5 +1,6 @@
 minikube start \
-    --extra-config=apiserver.service-node-port-range=15000-32767 \
+    # --extra-config=apiserver.service-node-port-range=15000-32767 \
+    --apiserver-ips="192.168.49.2" \
     --driver=docker \
     --cpus=4 \
     --memory=6144 \

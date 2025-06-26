@@ -1,0 +1,29 @@
+
+accessKey: minioadmin
+secretKey: minioadmin
+
+persistence:
+  enabled: false
+
+mode: standalone
+postJob:
+  enabled: false
+
+service:
+  type: NodePort
+  nodePorts:
+    api: 32000
+
+consoleService:
+  type: NodePort
+  nodePort: 32001
+
+console:
+  enabled: true
+
+resources:
+  requests:
+    memory: 1024Mi
+    cpu: 1000m
+
+    
